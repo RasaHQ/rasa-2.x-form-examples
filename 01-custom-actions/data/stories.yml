@@ -1,0 +1,64 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: name path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_name
+  - action: utter_ask_name
+  - intent: give_name
+  - action: action_receive_name
+  - intent: repeat_name
+  - action: action_say_name
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_name
+  - action: utter_ask_name
+  - intent: give_name
+  - action: action_receive_name
+  - slot_was_set:
+    - name: vincent
+  - intent: repeat_name
+  - action: action_say_name
+  - intent: tell_name
+  - action: utter_ask_name
+  - intent: give_name
+  - action: action_receive_name
+  - slot_was_set:
+    - name: jenny
+  - intent: repeat_name
+  - action: action_say_name
+  - intent: goodbye
+  - action: utter_goodbye
