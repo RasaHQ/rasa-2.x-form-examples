@@ -8,6 +8,20 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - request_names
+
+forms:
+  name_form:
+    first_name:
+      - type: from_text
+    last_name:
+      - type: from_text
+
+slots:
+  first_name:
+    type: text
+  last_name:
+    type: text
 
 responses:
   utter_greet:
@@ -28,6 +42,15 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_ask_first_name:
+  - text: "What is your first name?"
+
+  utter_submit:
+  - text: "Ok. Thanks!"
+
+  utter_slots_values:
+  - text: "I will remember that your name is {first_name} {last_name}!"
 
 session_config:
   session_expiration_time: 60

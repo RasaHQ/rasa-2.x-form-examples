@@ -90,3 +90,10 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: request_names
+  examples: |
+    - i want to give you my name
+    - give name 
+    - you need to know my name
+    - do you know my name?
