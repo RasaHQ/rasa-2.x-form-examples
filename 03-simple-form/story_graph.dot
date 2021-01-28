@@ -7,21 +7,18 @@ digraph  {
 6 [class=active, fontsize=12, label=utter_submit];
 7 [class=active, fontsize=12, label=utter_slots_values];
 8 [class="intent dashed active", label="  ?  ", shape=rect];
-9 [class="intent active", fillcolor=lightblue, label="hi there", shape=rect, style=filled];
+9 [class="intent active", fillcolor=lightblue, label=hello, shape=rect, style=filled];
 10 [class="intent active", fillcolor=lightblue, label="give name", shape=rect, style=filled];
-11 [class="intent active", fillcolor=lightblue, label=vincent, shape=rect, style=filled];
-12 [class="intent active", fillcolor=lightblue, label="mc-vincent-face", shape=rect, style=filled];
+11 [class="intent active", fillcolor=lightblue, label="vincent-mcvincent", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
 0 -> 1  [class=active, key=NONE, label=""];
 1 -> 9  [class=active, key=0];
 2 -> 10  [class=active, key=0];
 3 -> 6  [class=active, key=NONE, label=""];
 3 -> 11  [class=active, key=0];
-3 -> 12  [class=active, key=0];
 6 -> 7  [class=active, key=NONE, label=""];
 7 -> 8  [class=active, key=NONE, label=""];
 9 -> 2  [class=active, key=0];
 10 -> 3  [class=active, key=0];
 11 -> 3  [class=active, key=0];
-12 -> 3  [class=active, key=0];
 }
