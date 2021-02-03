@@ -28,10 +28,7 @@ intents:
 entities: []
 slots:
   name:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: text
 responses:
   utter_greet:
   - text: Hey! How are you?

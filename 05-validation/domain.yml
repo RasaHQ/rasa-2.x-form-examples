@@ -1,0 +1,55 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- deny
+- request_names
+- goodbye
+- affirm
+- mood_great
+- mood_unhappy
+- bot_challenge
+
+forms:
+  name_form:
+    first_name:
+    - type: from_text
+    last_name:
+    - type: from_text
+slots:
+  first_name:
+    type: text
+  last_name:
+    type: text
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_first_name:
+  - text: What is your first name?
+  utter_ask_last_name:
+  - text: What is your last name?
+  utter_submit:
+  - text: Ok. Thanks!
+  utter_slots_values:
+  - text: I will remember that your name is {first_name} {last_name}!
+
+actions:
+- utter_greet
+- utter_slots_values
+- utter_submit
+- validate_name_form

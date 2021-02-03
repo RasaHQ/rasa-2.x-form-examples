@@ -1,0 +1,20 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=utter_greet];
+3 [class=active, fontsize=12, label=name_form];
+7 [class="intent dashed active", label="  ?  ", shape=rect];
+8 [class="intent active", fillcolor=lightblue, label=yo, shape=rect, style=filled];
+9 [class="intent active", fillcolor=lightblue, label="give name", shape=rect, style=filled];
+10 [class="intent active", fillcolor=lightblue, label=j, shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 8  [class=active, key=0];
+2 -> 9  [class=active, key=0];
+3 -> 7  [class=active, key=NONE, label=""];
+3 -> 10  [class=active, key=0];
+8 -> 2  [class=active, key=0];
+9 -> 3  [class=active, key=0];
+10 -> 3  [class=active, key=0];
+}

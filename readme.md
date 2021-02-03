@@ -36,7 +36,11 @@ If we want to query multiple things from the user, it may be best to use forms i
 
 Code can be found in the `03-simple-forms` folder. 
 
-## 4. Form Validation 
+## 4. Asking Questions 
+
+You can customise how questions are asked in a form. You can write templates in a domain.yml file or use custom actions.
+
+## 5. Form Validation 
 
 What if we want to validate the input of our form? We don't want to have a name that's an empty string after all! 
 
