@@ -57,3 +57,7 @@ Code can be found in the `05-entities-and-forms` folder.
 The user might give the response in a sentence, in which case we'll want to detect entities instead of grabbing the full text.
 
 Code can be found in the `06-expanding-forms` folder.
+
+## 7. Elaborate Name Form Example
+
+In this final example we'll show an elaborate example of a form that can ask for names.
