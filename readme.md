@@ -9,7 +9,7 @@ This repository contains a collection of tutorials that will help you understand
 To run all the examples here you'll need to install Rasa, preferably in a virtualenv in the root directory. 
 
 ```
-python -m pip install rasa==2.2
+python -m pip install rasa==2.3
 ```
 
 If you'd also like to use Rasa X, you can install this via; 
