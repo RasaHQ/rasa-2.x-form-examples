@@ -34,7 +34,10 @@ slots:
     auto_fill: true
     influence_conversation: true
   name_spelled_correctly:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
   requested_slot:
     type: rasa.shared.core.slots.UnfeaturizedSlot
     initial_value: null
